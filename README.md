@@ -10,3 +10,7 @@ Apply some function to keyword arguments
 pandas useful tools
 * df.less(): Append `df.head()` with `df.tail()`
 * df.mirror(): Append reverse DataFrame
+
+# graph_tools.py
+python graph tools
+* fine_ticks(): divide list from min to max
