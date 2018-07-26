@@ -86,6 +86,8 @@ class CalDict(UserDict):
         21
         >>> cdic.mean()
         7.0
+        >>> cdic.sort(reverse=True)
+        {'c': 15, 'b': 5, 'a': 1}
     """
 
     def __init__(self, **kwargs):
@@ -277,6 +279,10 @@ class CalDict(UserDict):
     def mean(self):
         """return mean of values"""
         return self.apply(sum) / len(self)
+
+    def sort(self, key=lambda x: x[1], reverse=False):
+        """sorted by values"""
+        return CalDict(**dict(sorted(self.items(), key=key, reverse=reverse)))
 
 
 if __name__ == '__main__':
